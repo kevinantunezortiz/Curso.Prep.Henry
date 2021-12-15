@@ -1,0 +1,25 @@
+Variables:
+Una variable nos sirve para almacenar un valor que posteriormente puede ser cambiado.
+
+Strings:
+Son un tipo de dato que nos permiten indicar que una variable almacenara texto.
+
+Funciones:
+Son aquellas que nos permiten declarar un codigo dentro de sus parentesis para que cuando
+sean invocadas ejecuten las instrucciones y quizas devuelvan un valor con la palabra
+reservada return, algunas incluyen argumentos que pueden modificar su comportamiento.
+
+
+Declaraciones "if":
+Ejecutara el codigo dentro de sus parentesis siempre y cuando la condicion a evaluar sea verdadera,
+en caso contrario puede seguir dos caminos: 
+1.- la instruccion "else-if" puede preguntar otra condicion y realizar el codigo si esta es 
+    verdadera.
+2.- la instruccion "else" si ninguna condicion es verdadera, se ejecutara el codigo dentro 
+    de sus parentesis.
+
+Valores Booleanos (true,false):
+
+Son los valores que ayudan a que podamos tener dos estados uno verdadero y otro falso,
+esto nos ayuda cuando queremos hacer una comparacion en una declaración if.
+
