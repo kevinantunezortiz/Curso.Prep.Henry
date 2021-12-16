@@ -1,0 +1,41 @@
+For:
+Esta sentencia la usamos cuando queremos ejecutar un codigo cierto numero de veces,para
+ello ocupamos una variable que tendra un inicio, un final y un aumento.
+
+`&&`, `||`, `!`:
+
+&& ("y")-> Nos sirve para indicar que se deben cumplir ambas condiciones por ejemplo en una sentencia if,
+tendriamos lo siguiente:
+var mePorteBien = true
+var termineMiTarea = true
+if (mePorteBien && termineMiTarea){
+    console.log("Genial Podre Salir a Jugar :) ya que me porte bien y termine mi tarea")
+} else{
+    console.log("No podre salir a jugar :(")
+}
+
+|| ("o")-> Nos sirve para indicar que mientras alguna de las condiciones sea verdadera, se ejecutara 
+el codigo por ejemplo en una sentencia if tendriamos lo siguiente:
+
+var mePorteBien = false
+var termineMiTarea = true
+
+if ( mePorteBien || termineMiTarea){
+    console.log("Genial Podre Salir a Jugar aunque no me porte bien o  no termine mi tarea :)")
+} else{
+    console.log("No podre salir a jugar :(")
+}
+
+! ("NOT")-> Nos sirve para indicar lo contrario de una expresion, por ejemplo en la sentencia if 
+tendriamos lo siguiente:
+
+var termineMiTarea = false //aqui tiene el valor de false pero con el ! pasaria a true
+                           //si tuviera el valor de true pasaria a false 
+
+if (!termineMiTarea){ // se lee como si no termine mi tarea 
+    console.log("No podre salir a jugar :(") 
+}
+
+
+
+
