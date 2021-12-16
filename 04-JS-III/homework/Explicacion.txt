@@ -1,0 +1,45 @@
+Arrays:
+
+Los arrays o arreglos nos permiten almacenar temporalmente informacion de cualquier tipo de dato,
+para poder crear un arreglo seria algo como lo siguiente:
+var arregloVacio = []
+var arreglo = ["hola",123,23.4,true] //arreglo con datos
+
+para acceder a un elemento del arreglo necesitamos indicar una posicion comenzando con el 0
+
+console.log(arreglo[0]) // imprime "hola"
+console.log(arreglo[1]) // imprime 123
+console.log(arreglo[2]) // imprime 23.4
+console.log(arreglo[3]) // imprime true
+console.log(arreglo[4]) // imprime undefined ya que no hay un elemento con ese indice
+
+para asignar o reasignar un elemento en el arreglo se puede hacer lo siguiente:
+
+arreglo[4] = "agregando en la posicion 4" 
+arreglo[3] = "se cambia true por este texto" 
+
+
+metodos importantes:
+
+arreglo.length          // sirve para obtener el numero de elementos del arreglo en este caso 4
+arreglo.push(item)      // sirve para agregar un elemento al final del arreglo
+arreglo.pop()           // elimina el ultimo elemento del arreglo y devuelve ese valor
+arreglo.unshift(item)   // agrega un elemento al principio del arreglo
+arreglo.shift()         // elimina el primer elemento del arreglo y devuelve ese valor
+
+Metodos para recorrer arreglos:
+
+1.- for
+// Recordemos que el primer indice del arreglo es 0 por eso i=0
+// i < arreglo.length indica al ciclo que se recorrera hasta i sea menor que el tamaño del arreglo
+// i++ incrementara i de uno en uno
+// console.log(arreglo[i]) accede al elemento que le corresponde el valor de i
+
+for(let i = 0; i < arreglo.length; i++){
+    console.log(arreglo[i])
+}
+
+2.- for each 
+arreglo.forEach((element,indice)=>{
+    console.log(indice+" "+element)
+})
