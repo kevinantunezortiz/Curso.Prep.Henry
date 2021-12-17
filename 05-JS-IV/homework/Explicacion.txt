@@ -1,0 +1,78 @@
+Objetos:
+Nos permiten crear dentro de ellos propiedades, las cuales deben ser declarados por 
+medio de una clave:valor, la clave no se puede repetir, a diferencia del valor que 
+puede estar asignado a varias claves y este puede ser de cualquier tipo (cadena, 
+número, booleano, matriz, función o incluso otro objeto).
+
+Ejemplos:
+
+var objetoVacio = {}
+var objetoConUnElemento = {nombre: 'kevin'}
+var objetoConVariosElementos = {nombre: 'Kevin', edad: 26, numerodelaSuerte: 26}
+
+Propiedades:
+podemos definir la propiedad de un objeto como el par clave-valor, en caso de tener
+mas de una propiedad podemos separarlas atraves de una , 
+
+var persona={
+    nombre: 'kevin',
+    edad: 26,
+    conectado: true,
+    pasatiempos: ["Desarrollar Apps Moviles","Jugar Videojuegos"]
+}
+En este objeto tenemos cuatro propiedades nombre, edad, conectado y pasatiempos
+si quisieramos eliminar una propiedad necesitamos hacer lo siguiente
+delete nombredelobjeto.nombredelapropiedad
+delete persona.conectado
+
+Métodos: 
+podemos asignarle a un objeto como propiedad una funcion, recordemos que el valor del
+objeto puede ser de cualquier tipo, podemos acceder a las otras propiedades del objeto
+con la palabra reservada this.nombredelapropiedad.
+
+var persona={
+    nombre: 'kevin',
+    edad: 26,
+    conectado: true,
+    pasatiempos: ["Desarrollar Apps Moviles","Jugar Videojuegos"],
+    cambiarEstado: function(){
+        this.conectado = !this.conectado
+    }
+}
+
+Bucle For..in:
+Nos permite recorrer cada clave del objeto para posteriormente
+obtener su valor.
+
+//Aqui persona es el nombre del objeto
+for(let clave in persona){
+    console.log(clave) //imprimiria nombre, edad , conectado, pasatiempos, cambiarEstado
+    console.log(persona[clave]) //imprimiria 'kevin', 26, true,
+                                //["Desarrollar Apps Moviles","Jugar Videojuegos"],
+                                //[function: cambiarEstado]
+}
+
+
+Notación de puntos vs notación de corchetes
+
+Para acceder a una propiedad del objeto podemos usar dos Métodos
+1.- Notación de puntos:
+    nombredelobjeto.nombredelapropiedad
+    persona.nombre // este nos devolvera el valor de 'kevin'
+    si queremos llamar a una función podemos ocupar
+    nombredelobjeto.nombredelafuncion()
+    persona.cambiarEstado()
+2.- Notación de corchetes
+    nombredelobjeto["nombredelapropiedad"]
+    persona["nombre"] // este nos devolvera el valor de 'kevin'
+    si queremos llamar a una función podemos ocupar
+    nombredelobjeto["nombredelafuncion"]()
+    persona["cambiarEstado"]()
+
+La mayor diferencia es que el método de corchetes tambien podemos pasarle
+una variable con el nombre de la propiedad, como en el siguiente ejemplo:
+
+const propiedad = "pasatiempos"
+console.log(persona[propiedad]) // esto imprimira el arreglo con los pasatiempos
+                                // ["Desarrollar Apps Moviles","Jugar Videojuegos"]
+
