@@ -1,0 +1,36 @@
+Funciones callback
+
+Una de las caracteristicas mas importantes de javascript es que podemos
+pasarle a una funcion un parametro que sea de tipo funcion a esto se le 
+conoce como 'callbacks'.
+
+Algunos ejemplos donde podemos sacarle provecho a esta habilidad son:
+
+->Para recorrer un arreglo podemos hacerlo con un bucle for normal o podemos
+hacerlo a partir del metodo forEach el cual necesita una función para
+que recorra los elementos del arreglo.
+
+var arreglo = [1,23,45,67,124]
+
+arreglo.forEach(function(elemento,indice){
+    console.log(elemento)
+})
+
+->Podemos usar el metodo .map de un arreglo que recibe como parametro un
+callback, este modifica cada elemento del arreglo y nos devuelve el arreglo
+modificado
+
+var arreglo = [1,23,45,67,124]
+
+
+const doble = arreglo.map(function(elemento){
+    return elemento * 2
+})
+
+podiamos declarar la funcion aparte y pasarsela
+
+function multiplicarX2(elemento){
+    return elemento*2
+}
+const doble = arreglo.map(multiplicarX2)
+//doble tendra el valor de [ 2, 46, 90, 134, 248 ]
