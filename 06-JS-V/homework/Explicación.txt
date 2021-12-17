@@ -1,0 +1,77 @@
+Clase:
+Una clase en javascript es una plantilla con la que podemos crear
+varios objetos que tienen atributos y métodos.
+
+-> el constructor nos permite crear el objeto de una clase de acuerdo
+a los atributos que le pasemos
+
+->this nos permite asignar los valores que vienen del constructor
+  a los atributos propios de la clase, tambien nos sirve para poder
+  acceder a esos valores en cualquier otra parte de la clase.
+
+
+Ejemplo:
+class nombreClase{
+    constructor(atributo1, atributo2,...atributoN){
+        this.atributo1 = atributo1
+        this.atributo2 = atributo2
+        ...
+        this.atributoN = atributoN
+    }
+    algunMetodo = function(){}
+    algunMetodo2 = function(){}
+    ...
+    algunMetodoN = function(){}
+}
+class Persona{
+    constructor(nombre,edad,conectado,pasatiempos){
+        this.nombre = nombre
+        this.edad = edad
+        this.conectado = conectado
+        this.pasatiempos = pasatiempos
+    }
+    cambiarEstado = function(){
+        this.conectado = !this.conectado
+    }
+}
+
+Tambien se puede crear una plantilla con una function
+
+function nombreClase(atributo1,atributo2,...atributoN){
+    this.atributo1=atributo1;
+    this.atributo2=atributo2;
+    ...
+    this.atributoN=atributoN;
+    this.algunMetodo1 = function(){}
+    this.algunMetodo2 = function(){}
+    ...
+    this.algunMetodoN = function(){}
+
+    //aqui devolvera this sin necesidad de hacerle return
+}
+
+function Persona(nombre,edad,conectado,pasatiempos){
+    this.nombre = nombre
+    this.edad = edad
+    this.conectado = conectado
+    this.pasatiempos = pasatiempos
+    this.cambiarEstado = function(){
+        this.conectado = !this.conectado
+    }
+}
+
+->Para crear un objeto de una clase se hace lo siguiente:
+nombredelavariable = new nombredelaClase(atributos del constructor)
+var persona = new Persona("kevin",26,true,["Crear Apps con React Native","Desarrollo de juegos con Phaser"])
+
+prototype:
+
+Nos permite asignarle otro método a una clase de la siguiente manera:
+
+nombredelaClase.prototype.nombreNuevoMétodo = function(){}
+Persona.prototype.saludar = function(){console.log('Hola mi nombre es '+this.nombre)}
+
+lo podriamos llamar desde un objeto 
+objeto.nombreNuevoMétodo()
+persona.saludar()
+
